@@ -2,7 +2,7 @@
 
 ## Overview
 
-[**Heat Pumps in Hanover**](https://meganklu.github.io/heat-pumps-hanover/) is a website prototype developed as part of my SIP team's work on **Energy Conservation & Renewable Energy Generation in the Rental Market**, focused on the New England Heat Pump Accelerator (NEHPA) Community Grant.
+[**Heat Pumps in Hanover**](https://meganklu.github.io/heat-pumps-hanover/) is a website prototype developed as part of my social impact practicum (SIP) team's work on **Energy Conservation & Renewable Energy Generation in the Rental Market**, focused on the New England Heat Pump Accelerator (NEHPA) Community Grant.
 
 The site was created as an early version of the "improved rental mockup" outlined in Stage 3 of our project plan. Its goal is to help residential tenants, landlords, and property managers in Hanover understand:
 
@@ -36,10 +36,11 @@ I defined the site's page structure and information hierarchy. I determined what
 I used Claude Code to generate the initial website build based on:
 - The style guidelines from my mood board
 - The page/content structure I outlined
+- Additional project context, including our proposal from the first SIP checkpoint
 
 ### 4. Human Revision & Iteration
 After the initial AI-generated draft, I made significant edits, including:
-- Restructuring the layout of each section to improve visual interest, accessibility, interactivity
+- Restructuring the layout of each section to improve visual interest, accessibility, and interactivity
 - Adding and rearranging sections
 - Editing and refining text for clarity, tone, and accuracy
 - Adjusting design elements that did not align with my original creative intent
