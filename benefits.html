@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Benefits of Heat Pumps | Heat Pumps for Hanover</title>
+<title>Benefits of Heat Pumps | Heat Pumps in Hanover</title>
 <meta name="description" content="How heat pumps work and why they lower energy bills, cut emissions, and improve comfort compared to oil, gas, and window AC systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,7 +16,7 @@
   <div class="nav-row">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true"></span>
-      Heat Pumps for Hanover
+      Heat Pumps in Hanover
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
     <nav class="main-nav">
@@ -30,6 +33,232 @@
     <span class="eyebrow">How they work &amp; why they help</span>
     <h1>The benefits of heat pumps</h1>
     <p class="lede">Heat pumps extract existing thermal energy from the outside air or ground and transfer it indoors or outdoors, depending on whether a building needs heating or cooling. Because they move heat instead of generating it by burning fuel, they can deliver more energy to a home than the electricity they consume.</p>
+    <div class="season-toggle" role="group" aria-label="Toggle winter or summer mode">
+      <button type="button" data-season-btn="winter">&#10052;&#65039; Winter</button>
+      <button type="button" data-season-btn="summer">&#9728;&#65039; Summer</button>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <div class="how-it-works-grid">
+      <div>
+        <span class="eyebrow">See it in motion</span>
+        <h2>How a heat pump moves heat</h2>
+        <p class="hp-caption winter">In winter mode, the outdoor unit pulls existing thermal energy out of the cold outside air. The refrigerant loop carries that heat inside, where it's released to warm the home.</p>
+        <p class="hp-caption summer">In summer mode, the indoor unit pulls heat out of the warm air inside the home. The refrigerant loop carries that heat outside, where it's released &mdash; cooling the home in the process.</p>
+        <p class="muted">Use the Winter / Summer toggle above to see the flow reverse.</p>
+      </div>
+      <svg class="hp-anim" viewBox="0 -20 600 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated cutaway of a house showing a heat pump moving heat between the outside and an indoor room, with weather matching the selected season">
+        <defs>
+          <g id="snowflake">
+            <line x1="-6" y1="0" x2="6" y2="0" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"></line>
+            <line x1="-3" y1="-5.2" x2="3" y2="5.2" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"></line>
+            <line x1="-3" y1="5.2" x2="3" y2="-5.2" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"></line>
+          </g>
+        </defs>
+
+        <!-- Outside -->
+        <rect class="hp-sky" x="0" y="-20" width="300" height="250"></rect>
+        <rect class="hp-ground-outside" x="0" y="230" width="300" height="70"></rect>
+
+        <!-- House structure -->
+        <polygon class="hp-roof" points="320,30 600,30 460,-15" stroke="#0f0c0a" stroke-width="2"></polygon>
+        <rect class="hp-room" x="320" y="30" width="280" height="270"></rect>
+        <rect class="hp-floor" x="320" y="250" width="280" height="50"></rect>
+        <line x1="320" y1="250" x2="600" y2="250" stroke="#8a5a2e" stroke-width="3"></line>
+        <!-- Wall cutaway: siding, insulation, drywall -->
+        <rect x="300" y="30" width="4" height="270" fill="#6b5a4a"></rect>
+        <rect x="304" y="30" width="10" height="270" fill="#e8c9a0"></rect>
+        <rect x="314" y="30" width="6" height="270" fill="#efe6da"></rect>
+        <rect x="296" y="222" width="28" height="10" fill="#8a8378"></rect>
+        <!-- Pendant light -->
+        <line x1="540" y1="30" x2="540" y2="52" stroke="#8a8378" stroke-width="2"></line>
+        <polygon points="530,52 550,52 545,66 535,66" fill="#e8c9a0"></polygon>
+
+        <!-- Rug, under the coffee table and couch -->
+        <ellipse cx="495" cy="258" rx="102" ry="11" fill="#e0c9a8" opacity="0.55"></ellipse>
+
+        <!-- Coffee table -->
+        <rect x="405" y="236" width="55" height="6" rx="2" fill="#8a5a2e"></rect>
+        <line x1="411" y1="242" x2="411" y2="250" stroke="#5c3b1e" stroke-width="3" stroke-linecap="round"></line>
+        <line x1="454" y1="242" x2="454" y2="250" stroke="#5c3b1e" stroke-width="3" stroke-linecap="round"></line>
+
+        <!-- Couch -->
+        <rect x="470" y="188" width="100" height="34" rx="8" fill="#c1704a"></rect>
+        <rect x="470" y="220" width="100" height="30" rx="6" fill="#c1704a"></rect>
+        <rect x="463" y="195" width="14" height="55" rx="6" fill="#a85f3c"></rect>
+        <rect x="563" y="195" width="14" height="55" rx="6" fill="#a85f3c"></rect>
+        <line x1="520" y1="222" x2="520" y2="250" stroke="#9c5636" stroke-width="1.5" opacity="0.5"></line>
+        <rect x="476" y="250" width="6" height="8" fill="#4a3728"></rect>
+        <rect x="568" y="250" width="6" height="8" fill="#4a3728"></rect>
+
+        <!-- Potted plant -->
+        <polygon points="335,225 359,225 355,247 339,247" fill="#b5673f"></polygon>
+        <ellipse cx="347" cy="208" rx="6" ry="15" fill="var(--sage-700)" transform="rotate(-18 347 208)"></ellipse>
+        <ellipse cx="347" cy="206" rx="6" ry="16" fill="var(--sage-700)"></ellipse>
+        <ellipse cx="347" cy="208" rx="6" ry="15" fill="var(--sage-700)" transform="rotate(18 347 208)"></ellipse>
+
+        <!-- Winter weather -->
+        <g class="hp-weather winter">
+          <g transform="translate(40,10)"><g class="hp-flake" style="animation-delay:-0.5s"><use href="#snowflake"></use></g></g>
+          <g transform="translate(120,-8)"><g class="hp-flake" style="animation-delay:-2.5s"><use href="#snowflake"></use></g></g>
+          <g transform="translate(200,25)"><g class="hp-flake" style="animation-delay:-4s"><use href="#snowflake"></use></g></g>
+          <g transform="translate(70,90)"><g class="hp-flake" style="animation-delay:-1.5s"><use href="#snowflake"></use></g></g>
+          <g transform="translate(235,110)"><g class="hp-flake" style="animation-delay:-3.2s"><use href="#snowflake"></use></g></g>
+
+          <!-- Snowman, on the open ground left of the outdoor unit -->
+          <g>
+            <circle cx="30" cy="206" r="26" fill="#ffffff" stroke="#cfe3ee" stroke-width="2"></circle>
+            <circle cx="30" cy="176" r="18" fill="#ffffff" stroke="#cfe3ee" stroke-width="2"></circle>
+            <circle cx="30" cy="150" r="12" fill="#ffffff" stroke="#cfe3ee" stroke-width="2"></circle>
+            <line x1="14" y1="174" x2="0" y2="162" stroke="#8a5a2e" stroke-width="2.2" stroke-linecap="round"></line>
+            <line x1="46" y1="174" x2="55" y2="160" stroke="#8a5a2e" stroke-width="2.2" stroke-linecap="round"></line>
+            <circle cx="26" cy="147" r="1.6" fill="#2b2420"></circle>
+            <circle cx="34" cy="147" r="1.6" fill="#2b2420"></circle>
+            <polygon points="30,150 40,152 30,155" fill="var(--orange-600)"></polygon>
+            <circle cx="30" cy="169" r="1.8" fill="#2b2420"></circle>
+            <circle cx="30" cy="180" r="1.8" fill="#2b2420"></circle>
+            <circle cx="30" cy="196" r="1.8" fill="#2b2420"></circle>
+          </g>
+        </g>
+
+        <!-- Summer weather -->
+        <g class="hp-weather summer">
+          <circle class="hp-sun-glow" cx="55" cy="34" r="28" fill="#ffcf5c" opacity="0.3"></circle>
+          <circle cx="55" cy="34" r="18" fill="#ffcf5c"></circle>
+          <g stroke="#ffcf5c" stroke-width="3" stroke-linecap="round">
+            <line x1="55" y1="2" x2="55" y2="10"></line>
+            <line x1="77" y1="12" x2="72" y2="19"></line>
+            <line x1="87" y1="34" x2="79" y2="34"></line>
+            <line x1="77" y1="56" x2="72" y2="49"></line>
+            <line x1="33" y1="12" x2="38" y2="19"></line>
+            <line x1="23" y1="34" x2="31" y2="34"></line>
+            <line x1="33" y1="56" x2="38" y2="49"></line>
+          </g>
+          <g class="hp-cloud">
+            <rect x="222" y="46" width="52" height="14" rx="7" fill="#ffffff"></rect>
+            <circle cx="230" cy="45" r="14" fill="#ffffff"></circle>
+            <circle cx="248" cy="40" r="17" fill="#ffffff"></circle>
+            <circle cx="264" cy="46" r="12" fill="#ffffff"></circle>
+          </g>
+
+          <!-- Kite -->
+          <g class="hp-kite">
+            <polygon points="155,3 173,25 155,47 137,25" fill="var(--orange-600)"></polygon>
+            <line x1="155" y1="3" x2="155" y2="47" stroke="#ffffff" stroke-width="1.5"></line>
+            <line x1="137" y1="25" x2="173" y2="25" stroke="#ffffff" stroke-width="1.5"></line>
+            <path d="M155,47 Q162,65 150,80 Q145,95 155,100" fill="none" stroke="#8a8378" stroke-width="1.5"></path>
+            <circle cx="159" cy="64" r="2.5" fill="var(--blue-500)"></circle>
+            <circle cx="148" cy="82" r="2.5" fill="var(--blue-500)"></circle>
+          </g>
+
+          <path d="M0,230 L15,216 L30,230 L45,216 L60,230 L75,216 L90,230 L105,216 L120,230 L135,216 L150,230 L165,216 L180,230 L195,216 L210,230 L225,216 L240,230 L255,216 L270,230 L285,216 L300,230 L300,240 L0,240 Z" fill="var(--sage-700)"></path>
+        </g>
+
+        <!-- Outdoor unit -->
+        <rect class="hp-unit-outdoor" x="70" y="120" width="110" height="110" rx="10"></rect>
+        <g class="hp-fan">
+          <circle cx="125" cy="175" r="34" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="3"></circle>
+          <line x1="125" y1="143" x2="125" y2="207" stroke="rgba(255,255,255,0.75)" stroke-width="4" stroke-linecap="round"></line>
+          <line x1="93" y1="175" x2="157" y2="175" stroke="rgba(255,255,255,0.75)" stroke-width="4" stroke-linecap="round"></line>
+          <line x1="102" y1="152" x2="148" y2="198" stroke="rgba(255,255,255,0.75)" stroke-width="4" stroke-linecap="round"></line>
+          <line x1="102" y1="198" x2="148" y2="152" stroke="rgba(255,255,255,0.75)" stroke-width="4" stroke-linecap="round"></line>
+        </g>
+        <text x="125" y="246" text-anchor="middle" class="hp-label">Outdoor unit</text>
+
+        <!-- Indoor unit -->
+        <rect class="hp-unit-indoor" x="345" y="60" width="120" height="56" rx="8"></rect>
+        <line x1="357" y1="74" x2="453" y2="74" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"></line>
+        <line x1="357" y1="88" x2="453" y2="88" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"></line>
+        <line x1="357" y1="102" x2="453" y2="102" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"></line>
+        <text x="405" y="50" text-anchor="middle" class="hp-label">Indoor unit</text>
+
+        <path id="hpLoop" d="M180,140 L345,140 L345,100 L180,100 Z" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-dasharray="4 5" opacity="0.5"></path>
+
+        <g class="hp-flow winter">
+          <circle class="hp-particle" r="6">
+            <animateMotion dur="3.2s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#hpLoop"></mpath></animateMotion>
+          </circle>
+          <circle class="hp-particle" r="6">
+            <animateMotion dur="3.2s" repeatCount="indefinite" begin="-1.07s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#hpLoop"></mpath></animateMotion>
+          </circle>
+          <circle class="hp-particle" r="6">
+            <animateMotion dur="3.2s" repeatCount="indefinite" begin="-2.13s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#hpLoop"></mpath></animateMotion>
+          </circle>
+        </g>
+        <g class="hp-flow summer">
+          <circle class="hp-particle" r="6">
+            <animateMotion dur="3.2s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#hpLoop"></mpath></animateMotion>
+          </circle>
+          <circle class="hp-particle" r="6">
+            <animateMotion dur="3.2s" repeatCount="indefinite" begin="-1.07s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#hpLoop"></mpath></animateMotion>
+          </circle>
+          <circle class="hp-particle" r="6">
+            <animateMotion dur="3.2s" repeatCount="indefinite" begin="-2.13s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#hpLoop"></mpath></animateMotion>
+          </circle>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <div class="how-it-works-grid">
+      <div>
+        <span class="eyebrow">Two ways to do it</span>
+        <h2>Air-source vs. ground-source</h2>
+        <p>Every heat pump shown so far is an <strong>air-source</strong> system &mdash; it exchanges heat with the outside air, the most common and affordable setup for New England homes. A <strong>ground-source</strong> (geothermal) system instead exchanges heat with a buried loop, tapping into the earth's stable year-round temperature for even higher efficiency &mdash; at a much higher installation cost and a need for yard space most rental properties in Hanover simply don't have.</p>
+        <ul class="pill-list" style="margin-top: 18px;">
+          <li>Air-source: lower install cost</li>
+          <li>Air-source: no yard needed</li>
+          <li>Ground-source: higher efficiency</li>
+          <li>Ground-source: needs land access</li>
+        </ul>
+      </div>
+      <svg class="hp-anim" viewBox="0 -10 600 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Side-by-side diagram comparing an air-source heat pump exchanging heat with outside air against a ground-source heat pump exchanging heat with a buried loop">
+        <defs>
+          <marker id="flowArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path class="hp-arrowhead" d="M0,0 L10,5 L0,10 Z"></path>
+          </marker>
+        </defs>
+        <rect class="hp-ground-static" x="0" y="170" width="600" height="100"></rect>
+        <line class="hp-divider" x1="300" y1="-10" x2="300" y2="250"></line>
+
+        <!-- Air-source -->
+        <polygon class="hp-roof" points="150,110 230,110 190,85"></polygon>
+        <rect class="hp-room" x="150" y="110" width="80" height="60"></rect>
+        <rect class="hp-floor" x="150" y="155" width="80" height="15"></rect>
+        <rect class="hp-unit-outdoor" x="60" y="128" width="62" height="47" rx="6"></rect>
+        <g class="hp-fan">
+          <circle cx="91" cy="151" r="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2.5"></circle>
+          <line x1="91" y1="137" x2="91" y2="165" stroke="rgba(255,255,255,0.75)" stroke-width="3" stroke-linecap="round"></line>
+          <line x1="77" y1="151" x2="105" y2="151" stroke="rgba(255,255,255,0.75)" stroke-width="3" stroke-linecap="round"></line>
+        </g>
+        <path class="hp-flow-arrow" marker-end="url(#flowArrow)" d="M35,95 Q55,115 62,135" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-dasharray="3 4"></path>
+        <path class="hp-flow-arrow" marker-end="url(#flowArrow)" d="M40,155 Q55,150 60,145" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-dasharray="3 4" style="animation-delay:-0.3s;"></path>
+        <path class="hp-flow-arrow" marker-end="url(#flowArrow)" d="M82,176 Q75,170 60,180" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-dasharray="3 4" style="animation-delay:-0.6s;"></path>
+        <text x="160" y="207" text-anchor="middle" class="hp-label" style="fill:#fff2e2;">Air-source</text>
+
+        <!-- Ground-source -->
+        <polygon class="hp-roof" points="470,110 550,110 510,85"></polygon>
+        <rect class="hp-room" x="470" y="110" width="80" height="60"></rect>
+        <rect class="hp-floor" x="470" y="155" width="80" height="15"></rect>
+        <path id="undergroundLoop" class="hp-loop-underground" d="M493,170 L493,225 Q503,240 513,225 L513,170"></path>
+        <circle class="hp-particle" r="4">
+          <animateMotion dur="2.4s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#undergroundLoop"></mpath></animateMotion>
+        </circle>
+        <circle class="hp-particle" r="4">
+          <animateMotion dur="2.4s" repeatCount="indefinite" begin="-1.2s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#undergroundLoop"></mpath></animateMotion>
+        </circle>
+        <path class="hp-flow-arrow" marker-end="url(#flowArrow)" d="M475,195 L488,195" stroke="var(--ink-soft)" stroke-width="2" stroke-dasharray="3 4"></path>
+        <path class="hp-flow-arrow" marker-end="url(#flowArrow)" d="M531,210 L518,210" stroke="var(--ink-soft)" stroke-width="2" stroke-dasharray="3 4" style="animation-delay:-0.5s;"></path>
+        <text x="503" y="252" text-anchor="middle" class="hp-label" style="font-size:11px; fill:#fff2e2;">~50&#176;F year-round</text>
+        <text x="503" y="207" text-anchor="middle" class="hp-label" style="fill:#fff2e2;">Ground-source</text>
+      </svg>
+    </div>
   </div>
 </section>
 
@@ -39,36 +268,78 @@
       <span class="eyebrow">Why it matters</span>
       <h2>What renters and landlords actually notice</h2>
     </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="icon blue">&#9889;</div>
-        <h3>Lower energy bills</h3>
-        <p>Because heat pumps move heat rather than generate it, they typically deliver 3&ndash;4 times more heating energy than the electricity they use &mdash; far more efficient than electric baseboard or resistance heating, and often cheaper to run than oil or propane.</p>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-icon blue">&#9889;</span>
+          <span class="accordion-title">Lower energy bills</span>
+          <span class="accordion-caret" aria-hidden="true">&#43;</span>
+        </button>
+        <div class="accordion-panel">
+          <div class="accordion-panel-inner">
+            <p>Because heat pumps move heat rather than generate it, they typically deliver 3&ndash;4 times more heating energy than the electricity they use &mdash; far more efficient than electric baseboard or resistance heating, and often cheaper to run than oil or propane.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon orange">&#127777;&#65039;</div>
-        <h3>Heating and cooling, one system</h3>
-        <p>A single heat pump replaces both a furnace and a separate air conditioner, running heat in the winter and reversing to cool in the summer. That's one system to install, maintain, and budget for instead of two.</p>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-icon orange">&#127777;&#65039;</span>
+          <span class="accordion-title">Heating and cooling, one system</span>
+          <span class="accordion-caret" aria-hidden="true">&#43;</span>
+        </button>
+        <div class="accordion-panel">
+          <div class="accordion-panel-inner">
+            <p>A single heat pump replaces both a furnace and a separate air conditioner, running heat in the winter and reversing to cool in the summer. That's one system to install, maintain, and budget for instead of two.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon blue">&#127795;</div>
-        <h3>Lower emissions</h3>
-        <p>Heat pumps run entirely on electricity, with no on-site combustion of oil, propane, or natural gas. As New England's electric grid gets cleaner, the emissions from heating a home with a heat pump keep falling too.</p>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-icon blue">&#127795;</span>
+          <span class="accordion-title">Lower emissions</span>
+          <span class="accordion-caret" aria-hidden="true">&#43;</span>
+        </button>
+        <div class="accordion-panel">
+          <div class="accordion-panel-inner">
+            <p>Heat pumps run entirely on electricity, with no on-site combustion of oil, propane, or natural gas. As New England's electric grid gets cleaner, the emissions from heating a home with a heat pump keep falling too.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon orange">&#128295;</div>
-        <h3>Simpler, safer operation</h3>
-        <p>No combustion means no fuel deliveries, no flue or chimney to maintain, and no carbon monoxide risk from the heating system itself &mdash; a meaningful safety upgrade for older rental housing stock.</p>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-icon orange">&#128295;</span>
+          <span class="accordion-title">Simpler, safer operation</span>
+          <span class="accordion-caret" aria-hidden="true">&#43;</span>
+        </button>
+        <div class="accordion-panel">
+          <div class="accordion-panel-inner">
+            <p>No combustion means no fuel deliveries, no flue or chimney to maintain, and no carbon monoxide risk from the heating system itself &mdash; a meaningful safety upgrade for older rental housing stock.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon blue">&#127777;</div>
-        <h3>Better comfort and air quality</h3>
-        <p>Modern heat pumps deliver more even, consistent temperatures than baseboard heat or window units, with better humidity control and less of the temperature swing renters describe with older systems.</p>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-icon blue">&#127777;</span>
+          <span class="accordion-title">Better comfort and air quality</span>
+          <span class="accordion-caret" aria-hidden="true">&#43;</span>
+        </button>
+        <div class="accordion-panel">
+          <div class="accordion-panel-inner">
+            <p>Modern heat pumps deliver more even, consistent temperatures than baseboard heat or window units, with better humidity control and less of the temperature swing renters describe with older systems.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon orange">&#128200;</div>
-        <h3>Rising value over time</h3>
-        <p>As utility rates for oil and propane continue to be volatile, an efficient electric system insulates a property (and its energy bills) from those swings &mdash; a long-term asset for the building owner.</p>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-icon orange">&#128200;</span>
+          <span class="accordion-title">Rising value over time</span>
+          <span class="accordion-caret" aria-hidden="true">&#43;</span>
+        </button>
+        <div class="accordion-panel">
+          <div class="accordion-panel-inner">
+            <p>As utility rates for oil and propane continue to be volatile, an efficient electric system insulates a property (and its energy bills) from those swings &mdash; a long-term asset for the building owner.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -122,6 +393,52 @@
   </div>
 </section>
 
+<section class="section-dark section-spacious">
+  <div class="wrap">
+    <div class="how-it-works-grid">
+      <div>
+        <span class="eyebrow">For comparison</span>
+        <h2>How a furnace works, by contrast</h2>
+        <p>Furnaces burn fuel &mdash; oil, propane, or gas &mdash; to generate heat directly, then blow that warm air into the home. Some of the energy released by combustion always escapes as exhaust up the flue, and the whole system only runs in one direction: there's no way to reverse a furnace to cool a home in the summer.</p>
+        <ul class="pill-list" style="margin-top: 18px;">
+          <li>Burns fuel on-site</li>
+          <li>Heating only, no cooling</li>
+          <li>Wastes heat as exhaust</li>
+        </ul>
+      </div>
+      <svg class="hp-anim" viewBox="0 -40 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cutaway diagram of a furnace burning fuel, with exhaust rising and escaping up a flue">
+        <polygon class="hp-roof" points="20,40 460,40 240,-20"></polygon>
+        <rect class="hp-flue" x="225" y="-40" width="30" height="80"></rect>
+        <rect class="hp-room" x="20" y="40" width="440" height="210"></rect>
+        <rect class="hp-floor" x="20" y="222" width="440" height="28"></rect>
+        <rect class="hp-flue" x="225" y="40" width="30" height="135"></rect>
+        <rect class="hp-furnace-body" x="190" y="175" width="100" height="50" rx="8"></rect>
+
+        <g class="hp-flame-group">
+          <path class="hp-flame-outer" d="M240,175 C222,155 222,120 240,90 C258,120 258,155 240,175 Z"></path>
+          <path class="hp-flame-inner" d="M240,170 C228,153 228,130 240,108 C252,130 252,153 240,170 Z"></path>
+        </g>
+
+        <circle class="hp-exhaust" cx="240" cy="150" r="5">
+          <animate attributeName="cy" values="150;-55" dur="2.6s" repeatCount="indefinite"></animate>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.7;1" dur="2.6s" repeatCount="indefinite"></animate>
+        </circle>
+        <circle class="hp-exhaust" cx="240" cy="150" r="5">
+          <animate attributeName="cy" values="150;-55" dur="2.6s" begin="-0.9s" repeatCount="indefinite"></animate>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.7;1" dur="2.6s" begin="-0.9s" repeatCount="indefinite"></animate>
+        </circle>
+        <circle class="hp-exhaust" cx="240" cy="150" r="5">
+          <animate attributeName="cy" values="150;-55" dur="2.6s" begin="-1.8s" repeatCount="indefinite"></animate>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.7;1" dur="2.6s" begin="-1.8s" repeatCount="indefinite"></animate>
+        </circle>
+
+        <text x="240" y="-25" text-anchor="middle" class="hp-label">Exhaust escapes</text>
+        <text x="240" y="270" text-anchor="middle" class="hp-label">Furnace</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="callout blue">
@@ -145,7 +462,7 @@
       <h2>So why doesn't every rental have one already?</h2>
       <p>Because in a rental property, the person who'd pay for the upgrade often isn't the person who sees the lower energy bill.</p>
     </div>
-    <a class="btn btn-primary" href="split-incentives.html">See the renter/landlord split-incentive problem &rarr;</a>
+    <a class="btn btn-solid" href="split-incentives.html">See the renter/landlord split-incentive problem &rarr;</a>
   </div>
 </section>
 
@@ -153,8 +470,8 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <h4>Heat Pumps for Hanover</h4>
-        <p class="muted" style="max-width:32ch;">A student research project supporting the NEHPA Community Grant effort in Hanover and Lebanon, NH.</p>
+        <h4>Heat Pumps in Hanover</h4>
+        <p class="muted" style="max-width:32ch;">A student research project supporting the NEHPA Community Grant effort in Hanover, NH.</p>
       </div>
       <div>
         <h4>Site</h4>
@@ -174,7 +491,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      Prepared by Liam Kenny, Ryan Lee, Megan Lu, and Katharine Morley in partnership with Sustainable Hanover and the Town of Lebanon.
+      Prepared by Liam Kenny, Ryan Lee, Megan Lu, and Katharine Morley in partnership with Sustainable Hanover.
     </div>
   </div>
 </footer>
