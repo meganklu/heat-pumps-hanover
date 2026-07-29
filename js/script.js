@@ -74,13 +74,96 @@ document.addEventListener("DOMContentLoaded", () => {
     updateParallax();
   }
 
-  document.querySelectorAll(".accordion-trigger").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const item = btn.closest(".accordion-item");
-      const panel = item.querySelector(".accordion-panel");
-      const isOpen = item.classList.toggle("open");
-      btn.setAttribute("aria-expanded", String(isOpen));
-      panel.style.maxHeight = isOpen ? panel.scrollHeight + "px" : "0px";
+  document.querySelectorAll(".card-stack").forEach((stack) => {
+    const items = Array.from(stack.querySelectorAll(".stack-item"));
+    const total = items.length;
+    const nav = stack.parentElement.querySelector(".stack-nav");
+    const dots = nav ? Array.from(nav.querySelectorAll(".stack-dot")) : [];
+    const prevBtn = nav ? nav.querySelector("[data-stack-prev]") : null;
+    const nextBtn = nav ? nav.querySelector("[data-stack-next]") : null;
+    let active = 0;
+
+    const render = () => {
+      items.forEach((item, i) => {
+        let offset = i - active;
+        if (offset > total / 2) offset -= total;
+        if (offset < -total / 2) offset += total;
+        item.classList.toggle("active", offset === 0);
+        if (offset === 0) {
+          item.style.transform = "translateX(0) scale(1) rotate(0deg)";
+          item.style.opacity = "1";
+          item.style.zIndex = "3";
+        } else {
+          const dir = offset > 0 ? 1 : -1;
+          item.style.transform = `translateX(${dir * 70}px) scale(0.88) rotate(${dir * 4}deg)`;
+          item.style.opacity = "0.65";
+          item.style.zIndex = "2";
+        }
+      });
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === active));
+    };
+
+    const setActive = (index) => {
+      active = ((index % total) + total) % total;
+      render();
+    };
+
+    items.forEach((item, i) => {
+      const flipCard = item.querySelector(".flip-card");
+      const activateOrFlip = () => {
+        if (i !== active) {
+          setActive(i);
+        } else {
+          flipCard.classList.toggle("flipped");
+        }
+      };
+      item.addEventListener("click", activateOrFlip);
+      flipCard.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          activateOrFlip();
+        }
+      });
+    });
+
+    if (prevBtn) prevBtn.addEventListener("click", () => setActive(active - 1));
+    if (nextBtn) nextBtn.addEventListener("click", () => setActive(active + 1));
+    dots.forEach((dot, i) => dot.addEventListener("click", () => setActive(i)));
+
+    render();
+  });
+
+  document.querySelectorAll(".stat-col").forEach((col) => {
+    const toggle = () => col.classList.toggle("expanded");
+    col.addEventListener("click", toggle);
+    col.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
     });
   });
+
+  const splitContinuum = document.querySelector(".split-continuum");
+  if (splitContinuum) {
+    const bgBlue = splitContinuum.querySelector('[data-split-bg="blue"]');
+    const bgOrange = splitContinuum.querySelector('[data-split-bg="orange"]');
+    const heroColumns = splitContinuum.querySelector(".split-hero-columns");
+    const setSplit = (blueWidth) => {
+      bgBlue.style.width = `${blueWidth}%`;
+      bgOrange.style.width = `${100 - blueWidth}%`;
+      if (heroColumns) {
+        // Shift position only — column widths stay fixed so the paragraph never reflows.
+        const shift = (blueWidth - 50) * 3.5;
+        heroColumns.style.transform = `translateX(${shift}px)`;
+      }
+    };
+    splitContinuum.querySelectorAll(".split-side").forEach((side) => {
+      const grow = side.classList.contains("split-renter") ? 58 : 42;
+      side.addEventListener("mouseenter", () => setSplit(grow));
+      side.addEventListener("mouseleave", () => setSplit(50));
+      side.addEventListener("focusin", () => setSplit(grow));
+      side.addEventListener("focusout", () => setSplit(50));
+    });
+  }
 });
