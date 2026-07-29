@@ -38,11 +38,13 @@ I used Claude Code to generate the initial website build based on:
 - The page/content structure I outlined
 
 ### 4. Human Revision & Iteration
-After the initial AI-generated draft, I made significant manual edits, including:
+After the initial AI-generated draft, I made significant edits, including:
 - Restructuring the layout of each section to improve visual interest, accessibility, interactivity
 - Adding and rearranging sections
 - Editing and refining text for clarity, tone, and accuracy
 - Adjusting design elements that did not align with my original creative intent
+
+See screenshots of the first iteration of the site before this step in the [v1 images folder](images/v1).
 
 ## Human vs. AI Contribution
 
